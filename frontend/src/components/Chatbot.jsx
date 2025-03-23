@@ -46,14 +46,14 @@ export const Chatbot = ({ messages, setMessages }) => {
                 {messages.map((msg, index) => (
                     <MessageBubble key={index} message={msg} />
                 ))}
-                {isTyping && <div className="typing-indicator">TravelMate AI is typing...</div>}
+                {isTyping && <div className="typing-indicator">AI Tour guide is typing...</div>}
             </div>
 
             <div className="input-container">
                 <input
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
-                    placeholder="Ask me about your trip..."
+                    placeholder="Hi I am your tour guide..."
                     className="input-field"
                 />
                 <button onClick={sendMessage} className="send-button">Send</button>
