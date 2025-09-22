@@ -1,40 +1,81 @@
-# 💬 Emotional Support Chatbot  
+# AI-Tour-Guide
 
-The **Emotional Support Chatbot** is an AI-powered conversational assistant designed to provide friendly, empathetic conversations and basic emotional support. It uses **Ollama** for running local large language models and **LangChain** to manage conversations and prompts effectively.  
+**AI-Tour-Guide** is an intelligent chatbot that helps users plan tours, explore travel destinations, and get personalized travel advice. Built with a transformer-based model using **RAG (Retrieval-Augmented Generation)**, it provides accurate, context-aware responses from large travel datasets.
 
-⚠️ *This chatbot is not intended to replace professional mental health support.*  
+## Features
 
----  
+* Personalized tour recommendations based on user preferences.
+* Interactive Q\&A for travel-related queries.
+* Offline dataset support for local deployment.
+* Fast, streamed responses for real-time interaction.
 
-## 🛠 Features  
+## Tech Stack
 
-- Friendly, non-judgmental conversation  
-- Basic emotional support and encouragement  
-- LLM-powered responses using **Ollama**  
-- Prompt management and memory with **LangChain**  
-- Local, private, and customizable  
+* **Backend:** Python, Flask
+* **Frontend:** React.js
+* **ML Model:** Mistral-7B-Travel
+* **Data Storage:** Local datasets / optional database
 
----  
+## Installation
 
-## ⚙️ Tech Stack  
+1. **Clone the repository:**
 
-- **Python**  
-- **Ollama** (for running local LLM models)  
-- **LangChain** (for conversational management)  
+```bash
+git clone <repository_url>
+cd AI-Tour-Guide
+```
 
----  
+2. **Set up backend environment:**
 
-## 🚀 Getting Started  
+```bash
+cd backend
+python -m venv venv
+source venv/bin/activate   # Linux/macOS
+venv\Scripts\activate      # Windows
+pip install -r requirements.txt
+```
 
-### Prerequisites  
+3. **Set up frontend environment:**
 
-- Python 3.8+  
-- [Ollama](https://ollama.ai/) installed and configured  
-- LLM model pulled via Ollama (e.g., `llama2`, `mistral`, etc.)  
+```bash
+cd ../frontend
+npm install
+npm start
+```
 
-### Installation  
+## Usage
 
-```bash  
-git clone https://github.com/yourusername/emotional-support-chatbot.git  
-cd emotional-support-chatbot  
+1. Start the Flask backend:
 
+```bash
+python backend/app.py
+```
+
+2. Open the frontend in your browser (usually `http://localhost:3000`).
+3. Type your travel queries and get responses streamed from the AI.
+
+## Project Structure
+
+```
+AI-Tour-Guide/
+├── backend/
+│   └── app.py           # Flask backend
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   │   └── Chatbot.jsx
+│   │   └── styles/chatbot.css
+│   ├── package.json
+│   └── index.js
+└── README.md
+```
+
+## Future Improvements
+
+* Add voice input/output for a fully interactive experience.
+* Integrate live map visualization for suggested itineraries.
+* Expand dataset for global destinations and local experiences.
+
+## License
+
+This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
